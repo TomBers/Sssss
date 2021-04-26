@@ -50,8 +50,8 @@ defmodule Sssss.MixProject do
       {:ex_aws, "~> 2.1.2"},
       {:ex_aws_s3, "~> 2.0"},
       {:hackney, "~> 1.9"},
-      {:sweet_xml, "~> 0.6"}
-#      {:wallaby, "~> 0.28.0"}
+      {:sweet_xml, "~> 0.6"},
+      {:wallaby, "~> 0.28.0"}
     ]
   end
 
