@@ -10,7 +10,9 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :sssss, SssssWeb.Endpoint,
-  url: [host: "example.com", port: 80]
+       http: [port: {:system, "PORT"}],
+       url: [scheme: "https", host: "sssscreenshotservice.herokuapp.com", port: 443],
+       force_ssl: [rewrite_on: [:x_forwarded_proto], host: nil]
 #  cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -52,4 +54,4 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
-import_config "prod.secret.exs"
+config :sssss, SssssWeb.Endpoint, server: true
