@@ -20,7 +20,7 @@ defmodule Sssss.MixProject do
   def application do
     [
       mod: {Sssss.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ex_unit]
     ]
   end
 
