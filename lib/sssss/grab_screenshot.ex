@@ -1,6 +1,4 @@
 defmodule Sssss.GrabScreenshot do
-  import Ecto
-
   alias Sssss.Screenshots
 
 
