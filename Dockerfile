@@ -64,6 +64,7 @@ RUN apk add --update bash openssl alsa-lib \
 #ENV PATH="/node_modules/chromedriver/lib/chromedriver:${PATH}"
 
 RUN mkdir /app
+RUN mkdir /app/screenshots
 WORKDIR /app
 
 COPY --from=build /app/_build/prod/rel/sssss ./

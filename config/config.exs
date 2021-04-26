@@ -53,14 +53,14 @@ config :wallaby,
 
 config :waffle,
        storage: Waffle.Storage.S3, # or Waffle.Storage.Local
-       bucket: System.get_env("AWS_BUCKET_NAME") # if using S3
+       bucket: {:system, "AWS_BUCKET_NAME"} # if using S3
 
 # If using S3:
 config :ex_aws,
        json_codec: Jason,
-       access_key_id: System.get_env("AWS_ACCESS_KEY_ID"),
-       secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
-       region: System.get_env("AWS_REGION")
+       access_key_id: {:system, "AWS_ACCESS_KEY_ID"},
+       secret_access_key: {:system, "AWS_SECRET_ACCESS_KEY"},
+       region: {:system, "AWS_REGION"}
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

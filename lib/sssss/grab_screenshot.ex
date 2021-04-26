@@ -47,7 +47,7 @@ defmodule Sssss.GrabScreenshot do
 
   def store_image(uuid) do
     dest = Path.join("screenshots", "#{uuid}.png")
-    Screenshots.store(dest)
+    IO.inspect(Screenshots.store(dest))
   end
 
 end
