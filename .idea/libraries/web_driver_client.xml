@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="web_driver_client" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/web_driver_client/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/web_driver_client/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/web_driver_client/lib" />
+      <root url="file://$PROJECT_DIR$/deps/web_driver_client/lib" />
+    </SOURCES>
+  </library>
+</component>

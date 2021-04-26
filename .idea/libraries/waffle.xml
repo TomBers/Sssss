@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="waffle" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/waffle/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/waffle/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/waffle/lib" />
+      <root url="file://$PROJECT_DIR$/deps/waffle/lib" />
+    </SOURCES>
+  </library>
+</component>

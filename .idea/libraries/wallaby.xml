@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="wallaby" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/wallaby/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/wallaby/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/wallaby/lib" />
+      <root url="file://$PROJECT_DIR$/deps/wallaby/priv" />
+      <root url="file://$PROJECT_DIR$/deps/wallaby/lib" />
+      <root url="file://$PROJECT_DIR$/deps/wallaby/priv" />
+    </SOURCES>
+  </library>
+</component>
