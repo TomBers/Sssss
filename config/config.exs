@@ -28,6 +28,7 @@ config :wallaby, driver: Wallaby.Chrome
 config :wallaby, otp_app: :sssss
 config :wallaby,
        chromedriver: [
+         binary: "/node_modules/chromedriver/bin/chromedriver",
          capabilities:   %{
            javascriptEnabled: true,
            loadImages: true,
