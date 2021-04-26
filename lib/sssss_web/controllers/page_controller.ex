@@ -7,7 +7,8 @@ defmodule SssssWeb.PageController do
   end
 
   def takeshot(conn, %{"url" => url}) do
-    GrabScreenshot.run(url)
-    json(conn, %{url: url})
+    table = :ets.new(:site_cache, [:set, :protected])
+    {path, height} = GrabScreenshot.run(url, table)
+    json(conn, %{path: path, width: 1280, height: height})
   end
 end
