@@ -31,10 +31,11 @@ RUN mix release
 
 # prepare release image
 FROM alpine:3.12 AS app
-RUN apk add --update bash openssl nodejs npm
+RUN apk add --update bash openssl chromium-chromedriver
 
 # Install the chrome driver to run the screenshotting
-RUN npm i chromedriver
+#RUN npm i chromedriver
+#ENV PATH="/node_modules/chromedriver/lib/chromedriver:${PATH}"
 
 RUN mkdir /app
 WORKDIR /app
