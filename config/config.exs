@@ -34,16 +34,13 @@ config :wallaby,
            version: "",
            rotatable: false,
            takesScreenshot: true,
-           cssSelectorsEnabled: true,
            nativeEvents: false,
            platform: "ANY",
            unhandledPromptBehavior: "accept",
-           loggingPrefs: %{
-             browser: "DEBUG"
-           },
            chromeOptions: %{
              args: [
                "--no-sandbox",
+               "--disable-dev-shm-usage",
                "window-size=1920,1080",
                "--disable-gpu",
                "--headless",

@@ -31,7 +31,33 @@ RUN mix release
 
 # prepare release image
 FROM alpine:3.12 AS app
-RUN apk add --update bash openssl chromium-chromedriver
+RUN apk add --update bash openssl alsa-lib \
+                                          at-spi2-atk \
+                                          atk \
+                                          cairo \
+                                          cups-libs \
+                                          dbus-libs \
+                                          eudev-libs \
+                                          expat \
+                                          flac \
+                                          gdk-pixbuf \
+                                          glib \
+                                          libgcc \
+                                          libjpeg-turbo \
+                                          libpng \
+                                          libwebp \
+                                          libx11 \
+                                          libxcomposite \
+                                          libxdamage \
+                                          libxext \
+                                          libxfixes \
+                                          tzdata \
+                                          libexif \
+                                          udev \
+                                          xvfb \
+                                          zlib-dev \
+                                          chromium \
+                                          chromium-chromedriver
 
 # Install the chrome driver to run the screenshotting
 #RUN npm i chromedriver
