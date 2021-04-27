@@ -6,13 +6,17 @@ defmodule Sssss.GrabScreenshot do
     uuid = Ecto.UUID.generate
     get_site_height(site, uuid, table)
     [{_, height}] = :ets.lookup(table, uuid)
-    take_screen_shot(uuid, height, site)
-    store_image(uuid)
+    Task.async(fn -> get_and_store_img(uuid, height, site) end)
     path = "#{System.get_env("IMG_PATH")}/#{uuid}.png"
     {path, height}
   end
 
-    defp get_site_height(site, uuid, table) do
+  defp get_and_store_img(uuid, height, site) do
+    take_screen_shot(uuid, height, site)
+    store_image(uuid)
+  end
+
+  defp get_site_height(site, uuid, table) do
     {:ok, session} = Wallaby.start_session()
 
     session
@@ -32,7 +36,7 @@ defmodule Sssss.GrabScreenshot do
 
   end
 
-  def take_screen_shot(uuid, height, site) do
+  defp take_screen_shot(uuid, height, site) do
     {:ok, session} = Wallaby.start_session(
       window_size: [
         width: 1280,
@@ -45,7 +49,7 @@ defmodule Sssss.GrabScreenshot do
     |> Wallaby.end_session()
   end
 
-  def store_image(uuid) do
+  defp store_image(uuid) do
     dest = Path.join("screenshots", "#{uuid}.png")
     IO.inspect(Screenshots.store(dest))
   end
