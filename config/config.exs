@@ -26,6 +26,7 @@ config :phoenix, :json_library, Jason
 
 config :wallaby, driver: Wallaby.Chrome
 config :wallaby, otp_app: :sssss
+config :wallaby, js_errors: false
 config :wallaby,
        hackney_options: [timeout: :infinity, recv_timeout: :infinity]
 
